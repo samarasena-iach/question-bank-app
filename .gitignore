@@ -1,0 +1,17 @@
+# Dart/Pub related
+.dart_tool/
+.packages
+.pub/
+
+# Flutter related
+build/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+flutter_*.png
+
+# VS Code
+.vscode/
+
+# Others
+*.iml
+.idea/
