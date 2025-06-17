@@ -24,7 +24,6 @@ class ContentRenderer extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 4.0),
               child: zoomable
                   ? Container(
-                      // 🔹 Added container to allow layout scaling
                       constraints: BoxConstraints(minHeight: 50),
                       child: InteractiveViewer(
                         minScale: 1.0,
@@ -40,7 +39,6 @@ class ContentRenderer extends StatelessWidget {
 
           case ContentType.code:
             final codeBox = Container(
-              // 🔹 ADDED (moved code block into variable)
               width: double.infinity,
               margin: EdgeInsets.symmetric(vertical: 4),
               padding: EdgeInsets.all(8),

@@ -21,11 +21,7 @@ class QuestionDatabase {
     final dbPath = await getDatabasesPath();
     final path = join(dbPath, fileName);
 
-    return await openDatabase(
-      path,
-      version: 1,
-      onCreate: _createDB,
-    );
+    return await openDatabase(path, version: 1, onCreate: _createDB);
   }
 
   Future _createDB(Database db, int version) async {
@@ -53,6 +49,16 @@ class QuestionDatabase {
     final result = await db.query('questions', orderBy: 'createdAt DESC');
 
     return result.map((map) => Question.fromMap(map)).toList();
+  }
+
+  Future<int> update(Question question) async {
+    final db = await instance.database;
+    return db.update(
+      'questions',
+      question.toMap(),
+      where: 'id = ?',
+      whereArgs: [question.id],
+    );
   }
 
   Future<int> delete(int id) async {

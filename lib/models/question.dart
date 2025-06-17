@@ -89,7 +89,7 @@ class Question {
 
     if (id != null) {
       map['id'] =
-          id; // This should be fine as id is int? and map is Map<String, dynamic>
+          id;
     }
 
     return map;
