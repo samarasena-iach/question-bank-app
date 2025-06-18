@@ -4,7 +4,6 @@ import 'package:flutter_animate/flutter_animate.dart';
 
 import '../db/question_database.dart';
 import '../models/question.dart';
-import '../widgets/content_renderer.dart';
 import 'add_question_screen.dart';
 import 'question_detail_screen.dart';
 
@@ -62,7 +61,7 @@ class _QuestionListScreenState extends State<QuestionListScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
+    Theme.of(context);
 
     return Scaffold(
       backgroundColor: Color(0xFFF9F9FB),
