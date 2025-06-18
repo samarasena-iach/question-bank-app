@@ -14,3 +14,10 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+Fully uninstall all versions of the app ->
+- cd 'C:\Users\PF247SB\AppData\Local\Android\Sdk\platform-tools'
+- Execute the command: adb uninstall com.example.question_bank_app
+Then; Execute: flutter clean, flutter pub get and flutter run
+
